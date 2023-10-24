@@ -25,3 +25,9 @@ footer{
 h1{
     text-align: center;
 }
+main{
+    padding: 5rem;
+}
+input{
+    border: 1px solid black !important;
+}

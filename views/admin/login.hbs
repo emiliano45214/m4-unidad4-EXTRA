@@ -1,3 +1,17 @@
-<h1>
-    pagina en proceso!
-</h1>
+<form action="/admin/login" class="row g-3" method="post">
+  <div class="col-md-6">
+    <label for="inputUser" class="form-label">usuario</label>
+    <input type="text" class="form-control"  name="usuario">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control"  name="password">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">ingresar</button>
+  </div>
+
+  {{#if error}}
+  <p>¡usuario y/o contraseña incorrectos!</p>
+  {{/if}}
+</form>
