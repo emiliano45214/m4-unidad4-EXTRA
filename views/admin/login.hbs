@@ -1,17 +1,111 @@
-<form action="/admin/login" class="row g-3" method="post">
-  <div class="col-md-6">
-    <label for="inputUser" class="form-label">usuario</label>
-    <input type="text" class="form-control"  name="usuario">
-  </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control"  name="password">
-  </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">ingresar</button>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
 
-  {{#if error}}
-  <p>¡usuario y/o contraseña incorrectos!</p>
-  {{/if}}
-</form>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/login.css">
+  <title>Login</title>
+</head>
+
+<body>
+
+  <main class="mainLogin">
+    <div class="div-Padre">
+      <div class="cont">
+      <form action="/admin/login" method="post">
+        <div class="form sign-in">
+          <h2>¡Inicia Sesion!</h2>
+          <label>
+            <span>Email</span>
+            <input type="text" name="usuario" />
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" name="password" />
+          </label>
+          {{!-- <p class="forgot-pass">Forgot password?</p> --}}
+          {{#if error}}
+          <p class="msjError">¡usuario y/o contraseña incorrectos!</p>
+          {{/if}}
+          <button type="submit" class="submit">Sign In</button>
+          {{!-- <button type="button" class="fb-btn">Connect with <span>facebook</span></button> --}}
+        </div>
+
+      </form>
+      <div class="sub-cont">
+        <div class="img">
+          <div class="img__text m--up">
+            <h2>Bienvenido</h2>
+            <p>te invitamos a ingresar el usuario y la contraseña correspondiente para ingresar a la pagina de
+              administrador!</p>
+          </div>
+          {{!-- <div class="img__text m--in">
+            <h2>One of us?</h2>
+            <p>If you already has an account, just sign in. We've missed you!</p>
+          </div>
+          {{!-- <div class="img__btn">
+            {{!-- <span class="m--up">Sign Up</span> --}}
+            <span class="m--in">Sign In</span>
+          </div> --}}
+        </div>
+        <div class="form sign-up">
+          <h2>Time to feel like home,</h2>
+          <label>
+            <span>Name</span>
+            <input type="text" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" />
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" />
+          </label> --}}
+          {{!-- <button type="button" class="submit">Sign Up</button> --}}
+          {{!-- <button type="button" class="fb-btn">Join with <span>facebook</span></button> --}}
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  {{!-- <a href="https://dribbble.com/shots/3306190-Login-Registration-form" target="_blank" class="icon-link">
+    <img src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/256/Dribbble-icon.png">
+  </a>
+  <a href="https://codepen.io/suez/pen/XWyBpre" target="_blank" class="link-footer">New 2023 Version</a>
+  <a href="https://twitter.com/NikolayTalanov" target="_blank" class="icon-link icon-link--twitter">
+    <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
+  </a> --}}
+
+
+
+
+
+
+
+
+
+
+
+  {{!-- <form action="/admin/login" class="row g-3" method="post">
+    <div class="col-md-6">
+      <label for="inputUser" class="form-label">usuario</label>
+      <input type="text" class="form-control" name="usuario">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">ingresar</button>
+    </div>
+
+    {{#if error}}
+    <p>¡usuario y/o contraseña incorrectos!</p>
+    {{/if}}
+  </form> --}}
+</body>
+
+</html>

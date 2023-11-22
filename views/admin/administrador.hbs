@@ -1,2 +1,101 @@
-<h1>bienvenido {{persona}} a la pagina de administradores</h1>
-<a class="btn btn-danger" href="/admin/login/logout">cerrar sesion</a>
+<div class="nav">
+    <h1>¡Hola {{persona}}! </h1>
+    <div class="cont-Botones">
+        <a class="btn btn-danger" href="/admin/login/logout">cerrar sesion</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="@getbootstrap">Agregar un nuevo producto</button>
+    </div>
+</div>
+<div class="padre-tabla">
+    <div class="tabla">
+        {{#each catalogoVinos}}
+        <div class="div-padreCard">
+            <div class="imgCard">
+                <img src="../../images/vinasoocard.jpg" alt="">
+            </div>
+            <div class="ContenidoCard">
+                <h3>id: {{id}}</h3>
+                <h3>nombre: {{nombre}}</h3>
+                <h3>marca: {{marca}}</h3>
+                <h3>clasificacion: {{clasificacion}}</h3>
+                <h3>precio: ${{precio}}</h3>
+            </div>
+            <div class="iconos">
+                <a  href="/admin/administrador/modificar/{{id}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                <a><i class="fa-solid fa-plus"></i></a>
+                <a href="/admin/administrador/eliminar/{{id}}"><i class="fa-solid fa-trash"></i></a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+
+{{!-- modal --}}
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">¡Nuevo Producto!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/admin/administrador" method="post">
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Marca:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="marca">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Clasificacion:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="clasificacion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Precio:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="precio">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- modal --}}
+{{!-- modal para confirmar si queremos eliminar el producto --}}
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalEliminar{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="exampleModalLabel">confirmacion requerida</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>¿Seguro que quieres eliminar este producto?</h6>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="/admin/administrador/eliminar/{{id}}" class="btn btn-primary">Save changes</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{!-- modal para confirmar si queremos eliminar el producto --}}

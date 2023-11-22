@@ -5,29 +5,372 @@ body{
 }
 header{
     margin: 0px;
-    width: 100%;
-    background-color: rgb(134, 0, 34);
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(74, 1, 36));
     text-align: center;
-    margin-bottom: 20px;
+    height: 300px;
 }
 header img {
     width: 300px;
 }
 footer{
     display: flex;
-    gap: 20px;
     justify-content: center;
-    background-color: rgb(134, 0, 34);
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(74, 1, 36));
     align-items: center;
+    flex-direction: column;
     color: aliceblue;
-    height: 200px;
+    min-height:150px;
+    padding: 5px;
+    
+}
+
+footer h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+
+footer h3{
+
+    font-size: 15px;
+}
+main{
+    min-height: 700px;
+    background-image: url(../images/11-corchos-vino-full.jpg);
+    background-size: cover;
 }
 h1{
     text-align: center;
 }
-main{
-    padding: 5rem;
-}
 input{
     border: 1px solid black !important;
 }
+.nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(74, 1, 36));
+
+}
+.nav h1{
+    text-decoration: overline;
+    font-size: 30px;
+    color: white;
+}
+.padre-tabla{
+    width: 100%;
+    height: 100%;
+    
+}
+.tabla{
+    width: 100%;
+    min-height: 700px;
+    background-color: rgba(0, 0, 0, 0.821);
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* -------------------------------------------------------- card -------------------------------------- */
+.div-padreCard{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 30px;
+    
+}
+.ContenidoCard{
+    padding: 3px;
+    background: linear-gradient(to left, rgb(91, 2, 45), rgb(74, 1, 36));
+    height: 200px;
+    text-align: center;
+    text-align-last: center;
+
+}
+.ContenidoCard h3{
+    font-family:  'Lucida Sans Regular', 'Lucida Grande', ;
+    font-size: 13.5px;
+    font-weight: 400;
+}
+.imgCard img{
+    height: 150px;
+    width: 148.6px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.iconos{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to left, rgb(91, 2, 45), rgb(74, 1, 36));
+}
+.iconos a{
+    padding: 15px;
+    background-color: #5e5e5e;
+    border-radius: 4px;
+}
+.iconos i{
+    text-align: center;
+    width: 10px;
+    margin-right: 5px;
+    color: #000000;
+}
+.iconos a:hover{
+
+    background-color: #ffffff;
+    transition: all 0.5s;
+
+}
+/* .iconos a,i:hover{
+    color: #901225;
+    transition: all 0.5s;
+} */
+
+/* -------------------------------------------------------------------------------error-------------------------------------------- */
+#container {
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden;
+    width:500px;
+    min-height: 800px;
+  }
+  
+  a, h1 {
+    font-size: 0.9em;
+    font-weight: 100;
+    letter-spacing: 3px;
+    padding-top: 5px;
+    color: #fcfcfc;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  .green {
+    color: #4ec07d;
+  }
+  
+  .red {
+    color: #ba1931;
+    font-weight: 400;
+  }
+  
+  .alert {
+    font-weight: 700;
+    letter-spacing: 5px;
+    font-size: 30px;
+  }
+  
+  p {
+    margin-top: -5px;
+    font-size: 0.5em;
+    font-weight: 100;
+    color: #5e5e5e;
+    letter-spacing: 1px;
+  }
+  
+  button,
+  .dot {
+    cursor: pointer;
+  }
+  
+  #success-box {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    left: 12%;
+    background: linear-gradient(to top right, #b0db7d 40%, #99dbb4 100%);
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(203, 205, 211, 0.1);
+    perspective: 40px;
+  }
+  
+  #error-box {
+    position: absolute;
+    width: 88%;
+    height: 88%;
+    right: 12%;
+    background: linear-gradient(to top right, rgb(255, 255, 255) 40%, rgb(111, 0, 54));
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(203, 205, 211, 0.1);
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: #fcfcfc;
+    border-radius: 50%;
+    position: absolute;
+    top: 4%;
+    right: 6%;
+  }
+  .dot:hover {
+    background: #c9c9c9;
+  }
+  
+  .two {
+    right: 12%;
+    opacity: 0.5;
+  }
+  
+  .face {
+    position: absolute;
+    width: 22%;
+    height: 22%;
+    background: #fcfcfc;
+    border-radius: 50%;
+    border: 1px solid #777777;
+    top: 21%;
+    left: 37.5%;
+    z-index: 2;
+    animation: bounce 1s ease-in infinite;
+  }
+  
+  .face2 {
+    position: absolute;
+    width: 35%;
+    height: 22%;
+    background: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #777777;
+    top: 21%;
+    left: 37.5%;
+    z-index: 2;
+    animation: roll 3s ease-in-out infinite;
+  }
+  
+  .eye {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #777777;
+    border-radius: 50%;
+    top: 40%;
+    left: 20%;
+  }
+  
+  .right {
+    left: 68%;
+  }
+  
+  .mouth {
+    position: absolute;
+    top: 43%;
+    left: 41%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+  }
+  
+  .happy {
+    border: 2px solid;
+    border-color: transparent #777777 #777777 transparent;
+    transform: rotate(45deg);
+  }
+  
+  .sad {
+    top: 49%;
+    border: 2px solid;
+    border-color: #777777 transparent transparent #777777;
+    transform: rotate(45deg);
+  }
+  
+  .shadow {
+    position: absolute;
+    width: 21%;
+    height: 3%;
+    opacity: 0.5;
+    background: #777777;
+    left: 40%;
+    top: 43%;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .scale {
+    animation: scale 1s ease-in infinite;
+  }
+  
+  .move {
+    animation: move 3s ease-in-out infinite;
+  }
+  
+  .message {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 40%;
+    top: 47%;
+  }
+
+  .message p{
+    font-size: 17px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .button-box {
+    position: absolute;
+    background: #fcfcfc;
+    width: 50%;
+    height: 15%;
+    border-radius: 20px;
+    top: 73%;
+    left: 25%;
+    outline: 0;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(119, 119, 119, 0.5);
+    transition: all 0.5s ease-in-out;
+    margin-top: 10px;
+  }
+  .button-box:hover {
+    background: #efefef;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  @keyframes bounce {
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  @keyframes scale {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  @keyframes roll {
+    0% {
+      transform: rotate(0deg);
+      left: 25%;
+    }
+    50% {
+      left: 60%;
+      transform: rotate(168deg);
+    }
+    100% {
+      transform: rotate(0deg);
+      left: 25%;
+    }
+  }
+  @keyframes move {
+    0% {
+      left: 25%;
+    }
+    50% {
+      left: 60%;
+    }
+    100% {
+      left: 25%;
+    }
+  }
+  .padreMSG-ERROR{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 700px;
+    background-color: rgba(0, 0, 0, 0.608);
+  }

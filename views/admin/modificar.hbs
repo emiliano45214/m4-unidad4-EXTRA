@@ -1,0 +1,24 @@
+<form action="/admin/administrador/modificar" method="post">
+<input type="hidden" class="form-control" id="recipient-name" name="id" value="{{producto.id}}">
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="nombre" value="{{producto.nombre}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Marca:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="marca" value="{{producto.marca}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Clasificacion:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="clasificacion" value="{{producto.clasificacion}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Precio:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="precio" value="{{producto.precio}}">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Modificar</button>
+                </form>
+                {{#if error}}
+                    <h1>{{message}}</h1>
+                {{/if}}

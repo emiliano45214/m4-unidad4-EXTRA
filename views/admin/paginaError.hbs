@@ -1,0 +1,23 @@
+<div class="padreMSG-ERROR">
+    <div id="container">
+    <div id="error-box">
+        <div class="dot"></div>
+        <div class="dot two"></div>
+        <div class="face2">
+            <div class="eye"></div>
+            <div class="eye right"></div>
+            <div class="mouth sad"></div>
+        </div>
+        <div class="shadow move"></div>
+        <div class="message">
+            <h1 class="alert">Error!</h1>
+            {{#if error}}
+                <p style="color: black;">{{message}}</p>
+                {{/if}}
+        </div>
+        <button class="button-box" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <a class="red" href="/admin/administrador">vuelve a intentarlo</a>
+        </button>
+    </div>
+</div>
+</div>
